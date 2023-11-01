@@ -1,5 +1,5 @@
 import { auth } from '../middlewares';
-import { getImages, serveImage, upload } from './image.entity';
+import { deleteImage, getImages, serveImage, upload } from './image.entity';
 
 export default function image() {
   /**
@@ -19,4 +19,10 @@ export default function image() {
   * @description This route is used to server an image to frontend.
   */
   this.route.get('/image/:imageId', serveImage(this));
+
+  /**
+  * GET /image/:imageId
+  * @description This route is used to server an image to frontend.
+  */
+  this.route.delete('/image', auth, deleteImage(this));
 }
