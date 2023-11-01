@@ -1,7 +1,7 @@
-import demo from './demo/demo';
+import image from './image/image';
 import user from './user/user';
 
 export const services = (app) => {
-  app.configure(demo);
   app.configure(user);
+  app.configure(image);
 };

@@ -1,12 +1,17 @@
 {
   "port": 4000,
-  "origin": [],
-  "useHTTP2": true,
+  "domain": "http://localhost:4000/api/",
+  "origin": [
+    "http://localhost:5173/"
+  ],
+  "useHTTP2": false,
   "SMTP_HOST": "",
   "SMTP_PORT": "",
   "SMTP_USER": "",
   "SMTP_PASSWORD": "",
   "EMAIL_NAME": "",
   "EMAIL_FROM": "from@example.com",
-  "MONGODB_URL": ""
+  "MONGODB_URL": "mongodb+srv://yeasir06:nkbUYIq9uSQKH6Ki@cluster0.ym4dhgm.mongodb.net/?retryWrites=true&w=majority",
+  "secret": "fuagsf21p8y7abp89fgqfasf",
+  "SESSION_KEY": "sid"
 }

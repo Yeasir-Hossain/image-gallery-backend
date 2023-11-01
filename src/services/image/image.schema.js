@@ -1,10 +1,8 @@
 import { Schema, model } from 'mongoose';
 
 const schema = new Schema({
-  sid: { type: String },
-  visitedTime: { type: Date },
-  rating: { type: Number },
-  review: { type: String }
+  path: { type: String },
+  user: { type: Schema.Types.ObjectId, ref: 'User' },
 }, { timestamps: true });
 
 schema.methods.toJSON = function () {
@@ -15,4 +13,4 @@ schema.methods.toJSON = function () {
   return JSON.parse(JSON.stringify(obj).replace(/_id/g, 'id'));
 };
 
-export default model('User', schema);
+export default model('Image', schema);
