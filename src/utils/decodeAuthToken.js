@@ -6,7 +6,6 @@ import settings from '../../settings.json';
 export default async function decodeAuthToken(token) {
   try {
     const decoded = jwt.verify(token, settings.secret);
-    console.log(decoded);
     const user = await operations.findOne({ table: User, key: { id: decoded.id } });
     if (!user) throw new Error('user not found');
     return user;

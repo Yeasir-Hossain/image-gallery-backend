@@ -41,15 +41,37 @@ export const upload = ({ db, imageUp }) => async (req, res) => {
  */
 export const getImages = ({ db }) => async (req, res) => {
   try {
-    // key: { query: { '_id': { '$in': productIds } } }
-    const images = await db.find({ table: Image, key: { query: req.query, allowedQuery: allowedQuery, paginate: false } });
-    images ? res.send(images) : res.status(400).send(badRequest);
-  }
-  catch (e) {
+    const query = {
+      $or: [
+        { user: { $exists: false } }
+      ]
+    };
+
+    if (req.user && req.user.id) {
+      query.$or.push({ user: { '_id': req.user.id } });
+    }
+
+    const images = await db.find({
+      table: Image,
+      key: {
+        query,
+        allowedQuery: allowedQuery,
+        paginate: false
+      }
+    });
+
+    if (images) {
+      res.send(images);
+    } else {
+      res.status(400).send(badRequest);
+    }
+  } catch (e) {
+    console.error(e);
     res.status(500).send(serverError);
-    console.log(e);
   }
 };
+
+
 
 
 /**
