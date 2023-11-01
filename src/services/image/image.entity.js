@@ -36,6 +36,7 @@ export const upload = ({ db, imageUp }) => async (req, res) => {
 
 /**
  * This function is used to get the images and also if there is any user images.
+ * Here if the user upload any images he or she will also get the images uploaded by them only along with the default images
  * @param {Object} db - The database object for interacting with the database.
  * @returns {Object} - all images
  */
@@ -59,12 +60,7 @@ export const getImages = ({ db }) => async (req, res) => {
         paginate: false
       }
     });
-
-    if (images) {
-      res.send(images);
-    } else {
-      res.status(400).send(badRequest);
-    }
+    images ? res.status(200).send(images) : res.status(400).send(badRequest);
   } catch (e) {
     console.error(e);
     res.status(500).send(serverError);
