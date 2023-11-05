@@ -1,38 +1,35 @@
-## Live URL:
+## Live URL
 
-## Front-End git repo: https://github.com/Yeasir-Hossain/image-gallery
+## Front-End Git Repo
+[Image Gallery Frontend Repository](https://github.com/Yeasir-Hossain/image-gallery)
 
-## Features:
-- I have created a user service where the user is being resgitered when the browser opens and a cookies is set which is used to detect the logged in user.
-- A image service is created with upload image, get all images and delete image from backend.
-- By default there are 11 images that were given in the instruction and these cannot be deleted permanently from the backend.
-- Images that are uploaded by only the user can be deleted permanenetly.
-- User can upload multiple images.
+## Features
+- User registration is handled through a user service that sets a cookie to detect the logged-in user when the browser opens.
+- An image service is provided, allowing users to upload images, retrieve all images, and delete images from the backend.
+- 11 default images are included and cannot be permanently deleted from the backend.
+- Only user-uploaded images can be deleted permanently.
+- Users can upload multiple images.
 
-## Challenges:
-Normally the image is stored in the server for faster upload and faster access by an image serving api endpoint but I did not have a free tier for storing images.
+## Challenges
+One challenge was the storage of images for faster access, as a free tier for image storage was not available.
 
-## Solution:
-I used a third party image CDN named Cloudinary. I have uploaded the image to cloudinary and then saved it in mongodb with the url of the image. Though this solution takes sometime for the image to upload but does the work perfectly.
+## Solution
+The solution involved using a third-party image CDN called Cloudinary. Images are uploaded to Cloudinary and saved in MongoDB with the image URL. This approach may take some time for image upload but effectively serves the purpose.
 
+## Boilerplate Information
+This boilerplate was created by GitHub user @dreygur and is built on top of Express.js, [socket.io](https://www.npmjs.com/package/socket.io), and MongoDB, utilizing Orama for search.
 
-## This boiler plate is created by github user @dreygur.
-A framework like boilerplate on top of express.js, [socket.io](https://www.npmjs.com/package/socket.io), mongodb, orama
-
-This booilerplate handles static file serving for SPA and also does the api serving part.
-
-## Features:
-
+### Features
 - SPA Server
-- REST api serving
-- Search using [orama](https://www.npmjs.com/package/@orama/orama) (a js search engine)
+- REST API serving
+- Search using [orama](https://www.npmjs.com/package/@orama/orama) (a JavaScript search engine)
 - Service Layer Architecture
-- Websocket using [socket.io](https://www.npmjs.com/package/socket.io)
+- Websocket functionality with [socket.io](https://www.npmjs.com/package/socket.io)
 - Mongoose ORM
-- Mailer using nodemailer
-- Basic database operations pebuilt, so one just have to write schema and nothing more
-- Disc caching
-- Written in ES6 so newcomers or frontend developers don't have to worry about node.js native api's
-- Pre-integrated linter using eslint so the code is always abide by the standards
+- Mailer functionality using Nodemailer
+- Basic database operations prebuilt, requiring only schema definition
+- Disk caching
+- Written in ES6 for a newcomer-friendly approach, eliminating concerns about Node.js native APIs
+- Pre-integrated linter using ESLint for code standards compliance
 
-Made with :heart: by [Rakibul Yeasin](https://facebook.com/dreygur)
+Made with ❤️ by [Rakibul Yeasin](https://facebook.com/dreygur).
