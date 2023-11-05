@@ -2,7 +2,7 @@
   "port": 4000,
   "domain": "http://localhost:4000/api/",
   "origin": [
-    "http://localhost:5173/"
+    "http://localhost:5173"
   ],
   "useHTTP2": false,
   "SMTP_HOST": "",
@@ -15,8 +15,8 @@
   "secret": "fuagsf21p8y7abp89fgqfasf",
   "SESSION_KEY": "sid",
   "CLOUDINARY_CREDS": {
-    "cloud_name": "dlocipt7z",
-    "api_key": "429375758434472",
-    "api_secret": "GKUHLc86VybsK_uv7L_SUreASqY"
+    "cloud_name": "dtihpuutc",
+    "api_key": "425811265138339",
+    "api_secret": "xxdaIwHVbCOUDxgOeEBpzlkYGDA"
   }
 }
