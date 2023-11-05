@@ -8,8 +8,8 @@
   ],
   "routes": [
     {
-      "src": "./src/(.*)",
-      "dest": "./src/index.js",
+      "src": "./(.*)",
+      "dest": "./src",
       "methods": [
         "GET",
         "POST",
