@@ -1,4 +1,4 @@
-## [Live URL](https://image-gallery-phi-flame.vercel.app/)
+## [Live URL](https://image-gallery-bucy.onrender.com)
 
 ## Front-End Git Repo
 [Image Gallery Frontend Repository](https://github.com/Yeasir-Hossain/image-gallery)
