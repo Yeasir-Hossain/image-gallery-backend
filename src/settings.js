@@ -3,7 +3,7 @@ const settings = {
   'domain': 'https://image-gallery-backend-5udk.onrender.com/api/',
   'origin': [
     'http://localhost:5173',
-    'https://image-gallery-phi-flame.vercel.app/'
+    'https://image-gallery-bucy.onrender.com/'
   ],
   'useHTTP2': false,
   'SMTP_HOST': '',
