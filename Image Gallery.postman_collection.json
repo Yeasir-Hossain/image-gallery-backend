@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "edb61e5a-65e2-4611-9cdd-fbe36b37be95",
+		"name": "Image Gallery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26473215"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "image",
+			"item": [
+				{
+					"name": "upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/Projects/image-gallery/src/assets/images/image-11.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/image",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "upload",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/E:/Projects/image-gallery/src/assets/images/image-11.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/image",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"image"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "89"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "797"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "129"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"81-WLz2hF2QLF9NxO/Q9jdhpP1gzF8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Nov 2023 11:08:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096172/ibad2agjx5aabxiczmrj.jpg\",\n    \"id\": \"654626227632df04a5fdf1f7\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/image",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all images",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/image",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"image"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "88"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "792"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1440"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5a0-10zdU6cJxnBs+VsN7xxdelnXF4Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Nov 2023 11:08:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"654625c67632df04a5fdf1e3\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096080/zehv3hqi9bdsvjhfajtn.webp\"\n    },\n    {\n        \"id\": \"654625d07632df04a5fdf1e5\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096090/jn1mpz6ciooyo7uktoth.webp\"\n    },\n    {\n        \"id\": \"654625da7632df04a5fdf1e7\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096100/okeovo7e17nrzpzqcpjd.webp\"\n    },\n    {\n        \"id\": \"654625e17632df04a5fdf1e9\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096108/thhghpcezusgfrlabnvz.webp\"\n    },\n    {\n        \"id\": \"654625ea7632df04a5fdf1eb\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096116/sxjm8bfnqlaxag67zwzi.webp\"\n    },\n    {\n        \"id\": \"654625f17632df04a5fdf1ed\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096123/llvsqgdqtqntiiwrxpsj.webp\"\n    },\n    {\n        \"id\": \"654625f97632df04a5fdf1ef\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096131/qslib1x8yrab0t7lf1ch.webp\"\n    },\n    {\n        \"id\": \"654626027632df04a5fdf1f1\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096140/fvjejsi23cakxvgauv66.webp\"\n    },\n    {\n        \"id\": \"654626117632df04a5fdf1f3\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096155/enqp9eezfypvmcptecu3.webp\"\n    },\n    {\n        \"id\": \"6546261a7632df04a5fdf1f5\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096163/maph52u6zkkmjrdhdps4.jpg\"\n    },\n    {\n        \"id\": \"654626227632df04a5fdf1f7\",\n        \"path\": \"https://res.cloudinary.com/dlocipt7z/image/upload/v1699096172/ibad2agjx5aabxiczmrj.jpg\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "delete Images",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":[\"6542cb37726240d40803bb1f\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/image",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:4000/api",
+			"type": "string"
+		}
+	]
+}
