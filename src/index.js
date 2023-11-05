@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import conncetMongoDB from './controllers/mongodb';
 import App from './app';
-import settings from '../settings.json';
+import settings from './settings';
 import './utils/dateOverride';
 
 (() => {

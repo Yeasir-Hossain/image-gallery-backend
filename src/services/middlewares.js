@@ -1,5 +1,5 @@
 import decodeAuthToken from '../utils/decodeAuthToken';
-import settings from '../../settings.json';
+import settings from '../settings';
 import { unauthorized } from '../utils/statics';
 /**
  * This function is used to authenticate request.

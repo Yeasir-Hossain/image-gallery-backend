@@ -22,7 +22,7 @@ import NewMailer from './controllers/email';
 import * as operations from './controllers/operations';
 
 // Settings
-import settings from '../settings.json';
+import settings from './settings';
 
 // Controllers
 import { imageUp } from './controllers/imageUp';
